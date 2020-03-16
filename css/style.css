@@ -78,7 +78,7 @@ body {
      display: none;
      margin: 0 auto;
      /*Shrink the canvas for hi-res*/
-     width: 1000px;
+     width: 2000px;
      height: 200px;
 }
 
