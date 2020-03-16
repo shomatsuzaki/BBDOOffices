@@ -96,6 +96,13 @@ input {
      display: none;
 }
 
+#canvasimg {
+     display: block;
+     margin: 0;
+     width: 2000px;
+     height: 200px;
+}
+
 /******************************************
 /* ADDITIONAL STYLES                   
 /*******************************************/
