@@ -24,13 +24,26 @@ $(document).ready(function() {
 			let f = new FontFace('GothamBlack', 'url(./fonts/Gotham-Black.woff)');
 			f.family = 'GothamBlack';
 			f.load().then(function() {
-				context.font = '226px GothamBlack';
-				context.textAlign = 'start';
 				officeName = officeform.value.toUpperCase();
-				context.clearRect(0, 0, canvas.width, canvas.height);
-				context.fillText(officeName, 590, 260);
-				context.drawImage(logo, 0, 100, 550, 158);
-
+				if (officeName.length < 11) {
+					context.font = '226px GothamBlack';
+					context.textAlign = 'start';
+					context.clearRect(0, 0, canvas.width, canvas.height);
+					context.fillText(officeName, 590, 260);
+					context.drawImage(logo, 0, 100, 550, 158);
+				} else if (officeName.length < 18) {
+					context.font = '160px GothamBlack';
+					context.textAlign = 'start';
+					context.clearRect(0, 0, canvas.width, canvas.height);
+					context.fillText(officeName, 450, 235);
+					context.drawImage(logo, 0, 120, 400, 115);
+				} else {
+					context.font = '100px GothamBlack';
+					context.textAlign = 'start';
+					context.clearRect(0, 0, canvas.width, canvas.height);
+					context.fillText(officeName, 290, 212);
+					context.drawImage(logo, 0, 140, 250, 72);
+				}
 				//Convert canvas to visible image
 				// dataURL = canvas.toDataURL("image/png;base64");
 				// img.src = dataURL;
@@ -47,8 +60,9 @@ $(document).ready(function() {
 		if (window.mobileAndTabletcheck) {
 			alert('Use this on a desktop, please.');
 		} else {
-			download(canvas, 'bbdo-logo.png');
 			document.getElementById('instructions').scrollIntoView({behavior: "smooth"});
+			document.getElementById('instructions').style.display = 'block';
+			download(canvas, 'bbdo-logo.png');
 		}
 	});
 });
