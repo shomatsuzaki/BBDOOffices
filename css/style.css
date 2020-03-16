@@ -59,6 +59,16 @@ Author: Sho Matsuzaki
 }
 
 @font-face {
+     font-family: "GothamMedium";
+
+     src: url("../fonts/Gotham-Medium.ttf") format("truetype"), /* Safari, Android, iOS */
+          url("../fonts/Gotham-Medium.woff") format("woff"), /* Modern Browsers */
+          url("../fonts/Gotham-Medium.woff2") format("woff2"); /* Modern Browsers */
+     font-weight: normal;
+     font-style: normal;
+}
+
+@font-face {
      font-family: "GothamMediumItalic";
 
      src: url("../fonts/Gotham-MediumItalic.ttf") format("truetype"), /* Safari, Android, iOS */
@@ -69,7 +79,7 @@ Author: Sho Matsuzaki
 }
 
 /******************************************
-/* LAYOUT                   
+/* GENERAL                   
 /*******************************************/
 
 html, body {
@@ -82,9 +92,9 @@ body {
      color: #ffffff;
      letter-spacing: 3px;
      line-height: 1.2;
-     font-size: 30px;
+     font-size: 20px;
      font-family: 'GothamLight', sans-serif;
-     background-color: #000000;
+     background-color: #ffffff;
 }
 
 #gradient {
@@ -104,6 +114,15 @@ body {
      text-align: center;
 }
 
+/******************************************
+/* OPENING                   
+/*******************************************/
+
+
+#open {
+     width: 100%;
+}
+
 #title {
      display: block;
      text-align: center;
@@ -111,31 +130,30 @@ body {
      font-size: 40px;
 }
 
-#canvas {
+#formcontainer {
      display: block;
-     margin: 0;
-     /*Shrink the canvas for hi-res*/
-     width: 1440px;
-     height: 200px;
+     width: 100%;
 }
 
-#go {
-     display: block;
-     margin: 20px auto;
-}
-
-#btndownload {
-     display: none;
-     margin: 20px auto;
+#bbdowhite {
+     display: inline-block;
+     vertical-align: top;
+     margin-top: 16px;
+     margin-right: 10px;
+     width: 250px;
+     height: 72px;
+     filter: grayscale(100) brightness(100);
+     -webkit-filter: grayscale(100) brightness(100);
+     -moz-filter: grayscale(100) brightness(100);
 }
 
 input {
      font-size: 60px;
      font-family: 'GothamBlack2', sans-serif;
      letter-spacing: 3px;
-     text-align: center;
+     text-align: left;
      color: #ffffff;
-     padding: 24px 50px 18px 50px;
+     padding: 26px 50px 18px 50px;
      display: inline-block;
      width: 760px;
      margin: 0 auto;
@@ -144,24 +162,86 @@ input {
      background-color: rgba(0,0,0,0);
 }
 
-input:focus {
+input:focus, button:focus {
      outline: none;
 }
 
-/*#go {
-     font-size: 20px;
-     font-family: 'GothamMediumItalic', sans-serif;
+#go {
+     font-size: 14px;
+     font-family: 'GothamBlack2', sans-serif;
+     vertical-align: top;
+     margin-top: 30px;
+     margin-left: 6px;
      letter-spacing: 2px;
      text-align: center;
-     color: #ffffff;
-     padding: 5px;
+     color: #000000;
      display: inline-block;
-     width: 15px;
-     margin: 0 auto;
+     width: 44px;
+     height: 44px;
+     padding-top: 4px;
      border: 2px solid #ffffff;
-     border-radius: 56px;
-     background-color: rgba(0,0,0,0);
-}*/
+     border-radius: 40px;
+     background-color: #ffffff;
+     mix-blend-mode: lighten;
+}
+
+#bodycopy {
+     display: block;
+     width: 800px;
+     padding-left: 150px;
+     text-align: left;
+     margin: 50px auto;
+}
+
+/******************************************
+/* RESULT                   
+/*******************************************/
+
+#result {
+     margin: 11% 10% 0 10%;
+     color: #000000;
+     text-align: left;
+}
+
+span {
+     font-family: 'GothamBlack2', sans-serif;
+     color: #ef4023;
+}
+
+#canvas {
+     display: block;
+     margin: 0;
+     /*Shrink the canvas for hi-res*/
+     width: 1160px;
+     height: 180px;
+}
+
+#btndownload {
+     display: block;
+     margin: 0 auto 0 0;
+     background-color: #000;
+     color: #fff;
+     font-family: GothamMediumItalic;
+     font-size: 18px;
+     letter-spacing: 1.5px;
+     border-radius: 20px;
+     padding: 10px 15px 6px 15px;
+}
+
+#disclaimer {
+     margin: 24px 100px 24px 0;
+}
+
+#thanks {
+     margin: 10px auto;
+     font-family: GothamMedium;
+}
+
+#instructions {
+     display: block;
+     margin: 100px auto;
+     width: 100%;
+}
 
 /*#canvasimg {
      display: none;

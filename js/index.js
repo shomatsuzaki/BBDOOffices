@@ -6,37 +6,50 @@ $(document).ready(function() {
 	// var img = document.getElementById('canvasimg');
 	var logo = document.getElementById('bbdo');
 
-	let f = new FontFace('GothamBlack', 'url(./fonts/Gotham-Black.woff)');
-	f.family = 'GothamBlack';
-	f.load().then(function() {
-		context.font = '245px GothamBlack';
-		context.textAlign = 'start';
+	$(document).keyup(function(event) {
+		// Number 13 is the "Enter" key on the keyboard
+		if (event.keyCode === 13) {
+			// Cancel the default action, if needed
+	    	event.preventDefault();
+			// Trigger the button element with a click
+			$('#go').click();
+		}
+	});
+	$('#go').click(function() {
+		var officeform = document.getElementById('officeform');
+		if (officeform.value == "") {
+			;
+		} else {
+			//THE MAGIC HAPPENS HERE
+			let f = new FontFace('GothamBlack', 'url(./fonts/Gotham-Black.woff)');
+			f.family = 'GothamBlack';
+			f.load().then(function() {
+				context.font = '226px GothamBlack';
+				context.textAlign = 'start';
+				officeName = officeform.value.toUpperCase();
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				context.fillText(officeName, 590, 260);
+				context.drawImage(logo, 0, 100, 550, 158);
 
-		$('#go').click(function() {
-			var officeform = document.getElementById('officeform');
-			officeform.style.display = 'none';
-			document.getElementById('go').style.display = 'none';
-			officeName = officeform.value.toUpperCase();
-			context.clearRect(0, 0, canvas.width, canvas.height);
-			context.fillText(officeName, 850, (canvas.height/2)+63);
-			context.drawImage(logo, 200, (canvas.height/2)-110);
+				//Convert canvas to visible image
+				// dataURL = canvas.toDataURL("image/png;base64");
+				// img.src = dataURL;
+				// img.style.display = 'block';
+				document.getElementById('gradient').style.display = 'none';
+				document.getElementById('open').style.display = 'none';
+				document.getElementById('result').style.display = 'block';
+			});
+		}
+	});
 
-			//Convert canvas to visible image
-			// dataURL = canvas.toDataURL("image/png;base64");
-			// img.src = dataURL;
-			// img.style.display = 'block';
-			document.getElementById('btndownload').style.display = 'block';
-		});
-
-		$('#btndownload').click(function() {
-			// if mobile or tablet
-			if (window.mobileAndTabletcheck) {
-				alert('Use this on a desktop, please.');
-			} else {
-				download(canvas, 'bbdo-logo.png');
-			}
-		});
-
+	$('#btndownload').click(function() {
+		// if mobile or tablet
+		if (window.mobileAndTabletcheck) {
+			alert('Use this on a desktop, please.');
+		} else {
+			// download(canvas, 'bbdo-logo.png');
+			document.getElementById('instructions').scrollIntoView({behavior: "smooth"});
+		}
 	});
 });
 

@@ -17,16 +17,34 @@
 	</head>
 	<body>
 		<div id='gradient'></div>
-		<div id="container">
-			<img id='bbdo' width='300px' src='images/BBDO_Logo.png' style='display: none;'>
-			<div id='title'>
-				BBDO IS OPENING HUNDREDS <br> OF NEW OFFICES.
+		<div id='container'>
+			<div id='open'>
+				<img id='bbdo' src='images/BBDO_Logo.png' style='display: none;'>
+				<div id='title'>
+					BBDO IS OPENING HUNDREDS <br> OF NEW OFFICES.
+				</div>
+				<div id='formcontainer'>
+					<img id='bbdowhite' src='images/BBDO_Logo.png'>
+					<input type='text' id='officeform' onkeyup="this.value = this.value.toUpperCase();" maxlength = '26'></input>
+					<button id='go'>GO</button>
+				</div>
+				<div id='bodycopy'>
+					TYPE YOUR ADDRESS HERE, <br>
+					GENERATE THE LOGO OF YOUR OWN BBDO <br>
+					AND ADD IT TO YOUR EMAIL SIGNATURE.
+				</div>
 			</div>
-			<input type='text' id='officeform' onkeyup="this.value = this.value.toUpperCase();" maxlength = '20'></input>
-			<button id='go'>GO</button>
-			<canvas id='canvas' width="2880" height="400"></canvas>
-			<!-- <img id='canvasimg'> -->
-			<button id='btndownload'>DOWNLOAD LOGO</button>
+			<div id='result' style='display: none;'>
+				<div id='congrats'>CONGRATS, YOU JUST LAUNCHED A NEW BBDO OFFICE<span>*</span></div>
+				<canvas id='canvas' width="2320" height="360"></canvas>
+				<!-- <img id='canvasimg'> -->
+				<button id='btndownload'>DOWNLOAD LOGO</button>
+				<div id='disclaimer'>
+					<span>*</span>OBVIOUSLY YOU ARE NOT LAUNCHING A NEW BBDO,<br>BUT YOU ARE INDEED HELPING BBDO NEW YORK CONTINUE STRONGER THAN EVER. WE KNOW THESE ARE HARD TIMES, AND WORKING FROM HOME CAN BE DIFFICULT. WHAT A TERRIBLE FEELING IT IS TO BE AFRAID OF EVERYONE AROUND YOU. EVEN BUYING TOILET PAPER SEEMS DAUNTING THESE DAYS.<br><br>BUT IF WE ALL WORK TOGETHER, WE WILL GET THROUGH THIS.<br>WITH EQUAL PARTS SMART THINKING, HARD WORK, HUMOR,<br>PLUS A DECENT WIFI CONNECTION, WE CAN BOOST EACH OTHER,<br>HELP OUR CLIENTS AND COME OUT STRONGER ON THE OTHER SIDE.
+				</div>
+				<div id='thanks'>THANK YOU FOR MAKING YOUR HOME, A LITTLE PART OF BBDO.</div>
+				<img id='instructions' src='images/instructions.jpg'>
+			</div>
 		</div>
 		<script src="js/index.js"></script>
 	</body>
