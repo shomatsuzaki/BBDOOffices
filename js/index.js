@@ -7,13 +7,13 @@ $(document).ready(function() {
 	let f = new FontFace('GothamUltra', 'url(./fonts/Gotham-Ultra.woff)');
 	f.family = 'GothamUltra';
 	f.load().then(function() {
-		context.font = '230px GothamUltra';
+		context.font = '245px GothamUltra';
 		context.textAlign = 'start';
 
 		$('#btnoffice').click(function() {
 			officeName = document.getElementById('officeform').value.toUpperCase();
 			context.clearRect(0, 0, canvas.width, canvas.height);
-			context.fillText(officeName, canvas.width/2, (canvas.height/2)+50);
+			context.fillText(officeName, canvas.width/2, (canvas.height/2)+63);
 			context.drawImage(img, 350, (canvas.height/2)-110);
 		});
 
