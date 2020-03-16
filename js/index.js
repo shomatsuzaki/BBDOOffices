@@ -9,7 +9,7 @@ $(document).ready(function() {
 	var context = canvas.getContext('2d');
 	var signature = document.getElementById('signature');
 	var cxt = signature.getContext('2d');
-	cxt.font = '100 18px Arial';
+	cxt.font = '100 22px Arial';
 	cxt.textAlign = 'start';
 	
 	var officeName = '';
@@ -40,38 +40,38 @@ $(document).ready(function() {
 					context.font = '226px GothamBlack';
 					context.textAlign = 'start';
 					context.clearRect(0, 0, canvas.width, canvas.height);
-					context.fillText(officeName, 590, 260);
-					context.drawImage(logo, 0, 100, 550, 158);
+					context.fillText(officeName, 590, 180);
+					context.drawImage(logo, 0, 20, 550, 158);
 					
 					cxt.fillStyle = '#ef4023';
-					cxt.fillRect(0, 90, 470, 20);
+					cxt.fillRect(0, 91, 560, 25);
 					cxt.fillStyle = '#FFFFFF';
-					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 105);
-					cxt.drawImage(canvas, 0, -48, 1160, 180);
+					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 110);
+					cxt.drawImage(canvas, 0, -8, 1160, 100);
 				} else if (officeName.length < 18) {
 					context.font = '160px GothamBlack';
 					context.textAlign = 'start';
 					context.clearRect(0, 0, canvas.width, canvas.height);
-					context.fillText(officeName, 450, 235);
-					context.drawImage(logo, 0, 120, 400, 115);
+					context.fillText(officeName, 450, 155);
+					context.drawImage(logo, 0, 40, 400, 115);
 
 					cxt.fillStyle = '#ef4023';
-					cxt.fillRect(0, 80, 470, 20);
+					cxt.fillRect(0, 80, 560, 25);
 					cxt.fillStyle = '#FFFFFF';
-					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 95);
-					cxt.drawImage(canvas, 0, -24, 928, 144);
+					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 100);
+					cxt.drawImage(canvas, 0, 0, 928, 80);
 				} else {
 					context.font = '100px GothamBlack';
 					context.textAlign = 'start';
 					context.clearRect(0, 0, canvas.width, canvas.height);
-					context.fillText(officeName, 290, 212);
-					context.drawImage(logo, 0, 140, 250, 72);
+					context.fillText(officeName, 290, 142);
+					context.drawImage(logo, 0, 70, 250, 72);
 
 					cxt.fillStyle = '#ef4023';
-					cxt.fillRect(0, 65, 470, 20);
+					cxt.fillRect(0, 75, 560, 25);
 					cxt.fillStyle = '#FFFFFF';
-					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 80);
-					cxt.drawImage(canvas, 0, -24, 928, 144);
+					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 95);
+					cxt.drawImage(canvas, 0, -7, 1044, 90);
 				}
 				//Convert canvas to visible image
 				// dataURL = canvas.toDataURL("image/png;base64");

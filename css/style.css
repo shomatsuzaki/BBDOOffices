@@ -199,9 +199,30 @@ input:focus, button:focus {
 /*******************************************/
 
 #result {
-     margin: 11% 10% 0 10%;
+     margin: 6% 10%;
      color: #000000;
      text-align: left;
+}
+
+#formheader {
+     display: block;
+     text-align: left;
+     font-family: 'PT Sans Narrow', sans-serif;
+     font-size: 30px;
+}
+
+hr.thick {
+     border: 3px solid #000;
+     margin: 3px 140px 0 0;
+}
+
+hr.thin {
+     border: 1.5px solid #000;
+     margin: 3px 140px 20px 0;
+}
+
+#congrats {
+     font-size: 26px;
 }
 
 span {
@@ -211,15 +232,15 @@ span {
 
 #canvas {
      display: block;
-     margin: 0;
+     margin-top: 20px;
      /*Shrink the canvas for hi-res*/
      width: 1160px;
-     height: 180px;
+     height: 100px;
 }
 
 #btndownload {
      display: block;
-     margin: 0 auto 0 0;
+     margin: 20px auto 40px 0;
      background-color: #000;
      color: #fff;
      font-family: GothamMediumItalic;
@@ -230,19 +251,23 @@ span {
 }
 
 #disclaimer {
+     font-family: Helvetica Neue, sans-serif;
      margin: 24px 100px 24px 0;
      letter-spacing: 1px;
 }
 
 #thanks {
-     margin: 10px auto;
+     margin: 10px auto 30px auto;
      letter-spacing: 1px;
-     font-family: GothamMedium;
+     font-family: Helvetica Neue, sans-serif;
+     font-weight: bold;
+     color: #ef4023;
 }
 
 #instructions {
      display: block;
      margin: 100px auto;
+     padding-top: 40px;
      width: 100%;
 }
 

@@ -11,9 +11,20 @@
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/style.css">
+		<!-- PT Sans -->
+		<link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:700&display=swap" rel="stylesheet">
 		
 		<!-- JQuery -->
 		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+		<!-- Favicons -->
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+		<link rel="manifest" href="site.webmanifest">
+		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
 		<div id='mobilesplash' style='display: none;'>PLEASE VIEW THIS SITE ON DESKTOP</div>
@@ -36,16 +47,22 @@
 				</div>
 			</div>
 			<div id='result' style='display: none;'>
+				<div id='formheader'>OMN FORM 0012</div>
+				<hr class='thick'>
+				<hr class='thin'>
 				<div id='congrats'>CONGRATS, YOU JUST LAUNCHED A NEW BBDO OFFICE<span>*</span></div>
-				<canvas id='canvas' width="2320" height="360"></canvas>
+				<canvas id='canvas' width="2320" height="200"></canvas>
 				<!-- <img id='canvasimg'> -->
+				<hr class='thick'>
 				<button id='btndownload'>DOWNLOAD LOGO</button>
 				<div id='disclaimer'>
-					<span>*</span>Obviously you are not launching a new BBDO, but you are indeed helping BBDO New York continue stronger than ever. We know these are hard times, and working from home can be difficult. What a terrible feeling it is to be afraid of everyone around you. Even buying toilet paper seems daunting these days.<br><br>But if we all work together, we will get through this. With equal parts smart thinking, hard work, humor, plus a decent WiFi connection, we can boost each other, help our clients and come out stronger on the other side.
+					<span>*</span>Obviously you are not launching a new BBDO, but you are indeed <br>helping BBDO New York continue stronger than ever.<br><br>We know these are hard times, and working from home can be difficult.<br>What a terrible feeling it is to be afraid of everyone around you.<br>Even buying toilet paper seems daunting these days.<br><br>But if we all work together, we will get through this. With equal parts smart thinking,<br>hard work, humor, plus a decent WiFi connection, we can boost each other,<br>help our clients and come out stronger on the other side.
 				</div>
 				<div id='thanks'>Thank you for making your home, a little part of BBDO.</div>
+				<hr class='thick'>
+				<hr class='thin'>
 				<img id='instructions' src='images/instructions.jpg' style='display: none;'>
-				<canvas id='signature' width="1130" height="112" style='display: none;'></canvas>
+				<canvas id='signature' width="1130" height="118" style='display: none;'></canvas>
 			</div>
 		</div>
 		<script src="js/index.js"></script>
