@@ -250,6 +250,15 @@ span {
      letter-spacing: 1px;
 }
 
+#mobilesplash {
+     position: fixed;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+}
+
 /*#canvasimg {
      display: none;
      margin: 0;
