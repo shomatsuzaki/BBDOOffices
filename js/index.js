@@ -20,7 +20,7 @@ $(document).ready(function() {
 		$('#btndownload').click(function() {
 			// if mobile or tablet
 			if (window.mobileAndTabletcheck) {
-				window.open(canvas.toDataURL('image/png;base64'), '_blank');
+				alert('Use this on a desktop, please.');
 			} else {
 				download(canvas, 'bbdo-logo.png');
 			}
