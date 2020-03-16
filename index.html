@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="We're opening thousands of BBDO offices worldwide.">
+    	<meta name="keywords" content="BBDO, office">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+		<title>BBDO Offices</title>
+		
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+		
+		<!-- JQuery -->
+		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+		<!-- HTMLtoCanvas API -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	</head>
+	<body>
+		<div id="container">
+			<img id='bbdo' width='300px' src='images/BBDO_Logo.png'>
+			<input type='text' id='officeform'></input>
+			<button id='btnoffice'>SET OFFICE NAME</button>
+			<canvas id='canvas' width="2000" height="400"></canvas>
+			<button id='btndownload'>DOWNLOAD LOGO</button>
+		</div>
+		<script src="js/index.js"></script>
+	</body>
+</html>
