@@ -43,7 +43,7 @@ $(document).ready(function() {
 					context.fillText(officeName, 590, 260);
 					context.drawImage(logo, 0, 100, 550, 158);
 					
-					cxt.fillStyle = '#FF0000';
+					cxt.fillStyle = '#ef4023';
 					cxt.fillRect(0, 90, 470, 20);
 					cxt.fillStyle = '#FFFFFF';
 					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 105);
@@ -55,7 +55,7 @@ $(document).ready(function() {
 					context.fillText(officeName, 450, 235);
 					context.drawImage(logo, 0, 120, 400, 115);
 
-					cxt.fillStyle = '#FF0000';
+					cxt.fillStyle = '#ef4023';
 					cxt.fillRect(0, 80, 470, 20);
 					cxt.fillStyle = '#FFFFFF';
 					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 95);
@@ -67,7 +67,7 @@ $(document).ready(function() {
 					context.fillText(officeName, 290, 212);
 					context.drawImage(logo, 0, 140, 250, 72);
 
-					cxt.fillStyle = '#FF0000';
+					cxt.fillStyle = '#ef4023';
 					cxt.fillRect(0, 65, 470, 20);
 					cxt.fillStyle = '#FFFFFF';
 					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 80);
