@@ -230,12 +230,12 @@ span {
 
 #disclaimer {
      margin: 24px 100px 24px 0;
-     letter-spacing: 2px;
+     letter-spacing: 1px;
 }
 
 #thanks {
      margin: 10px auto;
-     letter-spacing: 2px;
+     letter-spacing: 1px;
      font-family: GothamMedium;
 }
 
@@ -243,6 +243,10 @@ span {
      display: block;
      margin: 100px auto;
      width: 100%;
+}
+
+#signature {
+     letter-spacing: 1px;
 }
 
 /*#canvasimg {

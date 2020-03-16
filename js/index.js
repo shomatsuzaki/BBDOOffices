@@ -51,6 +51,15 @@ $(document).ready(function() {
 				document.getElementById('gradient').style.display = 'none';
 				document.getElementById('open').style.display = 'none';
 				document.getElementById('result').style.display = 'block';
+				var signature = document.getElementById('signature');
+				var cxt = signature.getContext('2d');
+				cxt.font = '100 15px Arial';
+				cxt.textAlign = 'start';
+				cxt.fillStyle = '#FF0000';
+				cxt.fillRect(0, 57, 399, 16);
+				cxt.fillStyle = '#FFFFFF';
+				cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 70);
+				cxt.drawImage(canvas, 0, -20, 580, 90);
 			});
 		}
 	});
@@ -62,7 +71,7 @@ $(document).ready(function() {
 		} else {
 			document.getElementById('instructions').scrollIntoView({behavior: "smooth"});
 			document.getElementById('instructions').style.display = 'block';
-			download(canvas, 'bbdo-logo.png');
+			download(signature, 'bbdo-logo.png');
 		}
 	});
 });
