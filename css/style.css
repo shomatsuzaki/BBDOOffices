@@ -75,7 +75,7 @@ body {
 }
 
 #canvas {
-     display: block;
+     display: none;
      margin: 0 auto;
      /*Shrink the canvas for hi-res*/
      width: 1000px;
@@ -92,7 +92,7 @@ input {
      margin: 20px auto;
 }
 
-img {
+#bbdo {
      display: none;
 }
 

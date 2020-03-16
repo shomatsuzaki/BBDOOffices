@@ -2,7 +2,9 @@ $(document).ready(function() {
 	var canvas = document.getElementById('canvas');
 	var context = canvas.getContext('2d');
 	var officeName = '';
-	var img = document.getElementById('bbdo');
+	var dataURL = '';
+	var img = document.getElementById('canvasimg');
+	var logo = document.getElementById('bbdo');
 
 	let f = new FontFace('GothamUltra', 'url(./fonts/Gotham-Ultra.woff)');
 	f.family = 'GothamUltra';
@@ -14,7 +16,11 @@ $(document).ready(function() {
 			officeName = document.getElementById('officeform').value.toUpperCase();
 			context.clearRect(0, 0, canvas.width, canvas.height);
 			context.fillText(officeName, canvas.width/2, (canvas.height/2)+63);
-			context.drawImage(img, 350, (canvas.height/2)-110);
+			context.drawImage(logo, 350, (canvas.height/2)-110);
+
+			//Convert canvas to visible image
+			dataURL = canvas.toDataURL("image/png;base64");
+			img.src = dataURL;
 		});
 
 		$('#btndownload').click(function() {
