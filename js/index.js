@@ -21,6 +21,9 @@ $(document).ready(function() {
 			//Convert canvas to visible image
 			dataURL = canvas.toDataURL("image/png;base64");
 			img.src = dataURL;
+
+			img.style.display = 'block';
+			document.getElementById('btndownload').style.display = 'block';
 		});
 
 		$('#btndownload').click(function() {

@@ -78,12 +78,17 @@ body {
      display: none;
      margin: 0;
      /*Shrink the canvas for hi-res*/
-     width: 2000px;
+     width: 1440px;
      height: 200px;
 }
 
-button {
+#btnoffice {
      display: block;
+     margin: 20px auto;
+}
+
+#btndownload {
+     display: none;
      margin: 20px auto;
 }
 
@@ -97,9 +102,9 @@ input {
 }
 
 #canvasimg {
-     display: block;
+     display: none;
      margin: 0;
-     width: 2000px;
+     width: 1440px;
      height: 200px;
 }
 
