@@ -69,12 +69,22 @@ $(document).ready(function() {
 		if (window.mobileAndTabletcheck) {
 			alert('Use this on a desktop, please.');
 		} else {
-			document.getElementById('instructions').scrollIntoView({behavior: "smooth"});
-			document.getElementById('instructions').style.display = 'block';
-			download(signature, 'bbdo-logo.png');
+			var instructions = document.getElementById('instructions');
+			downloadlogo(signature, instructions, 'bbdo-logo.png');
 		}
 	});
 });
+
+////////////////////////
+// Final download function
+////////////////////////
+
+function downloadlogo(canvas, instructions, filename) {
+	instructions.style.display = 'block';
+	location.href = "#";
+	location.href = "#instructions";
+	download(canvas, filename);
+}
 
 ////////////////////////
 // Gradient background
