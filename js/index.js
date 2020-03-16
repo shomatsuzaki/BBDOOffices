@@ -11,10 +11,7 @@ $(document).ready(function() {
 	var cxt = signature.getContext('2d');
 	cxt.font = '100 18px Arial';
 	cxt.textAlign = 'start';
-	cxt.fillStyle = '#FF0000';
-	cxt.fillRect(0, 55, 470, 20);
-	cxt.fillStyle = '#FFFFFF';
-	cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 70);
+	
 	var officeName = '';
 	var dataURL = '';
 	// var img = document.getElementById('canvasimg');
@@ -45,21 +42,36 @@ $(document).ready(function() {
 					context.clearRect(0, 0, canvas.width, canvas.height);
 					context.fillText(officeName, 590, 260);
 					context.drawImage(logo, 0, 100, 550, 158);
-					cxt.drawImage(canvas, 0, -20, 1160, 180);
+					
+					cxt.fillStyle = '#FF0000';
+					cxt.fillRect(0, 90, 470, 20);
+					cxt.fillStyle = '#FFFFFF';
+					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 105);
+					cxt.drawImage(canvas, 0, -50, 1160, 180);
 				} else if (officeName.length < 18) {
 					context.font = '160px GothamBlack';
 					context.textAlign = 'start';
 					context.clearRect(0, 0, canvas.width, canvas.height);
 					context.fillText(officeName, 450, 235);
 					context.drawImage(logo, 0, 120, 400, 115);
-					cxt.drawImage(canvas, 0, -24, 725, 112.5);
+
+					cxt.fillStyle = '#FF0000';
+					cxt.fillRect(0, 80, 470, 20);
+					cxt.fillStyle = '#FFFFFF';
+					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 95);
+					cxt.drawImage(canvas, 0, -24, 928, 144);
 				} else {
 					context.font = '100px GothamBlack';
 					context.textAlign = 'start';
 					context.clearRect(0, 0, canvas.width, canvas.height);
 					context.fillText(officeName, 290, 212);
 					context.drawImage(logo, 0, 140, 250, 72);
-					cxt.drawImage(canvas, 0, -18, 725, 112.5);
+
+					cxt.fillStyle = '#FF0000';
+					cxt.fillRect(0, 65, 470, 20);
+					cxt.fillStyle = '#FFFFFF';
+					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 80);
+					cxt.drawImage(canvas, 0, -24, 928, 144);
 				}
 				//Convert canvas to visible image
 				// dataURL = canvas.toDataURL("image/png;base64");
