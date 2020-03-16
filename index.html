@@ -2,11 +2,11 @@
 <html lang="en">
 	<head>
     	<meta charset="utf-8">
-    	<meta name="description" content="We're opening thousands of BBDO offices worldwide.">
-    	<meta name="keywords" content="BBDO, office">
+    	<meta name="description" content="We're opening hundreds of new office.">
+    	<meta name="keywords" content="BBDO, office, your, home">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
-		<title>BBDO Offices</title>
+		<title>BBDO YOUR HOME</title>
 		
 		<!-- external CSS link -->
 		<link rel="stylesheet" href="css/normalize.css">
@@ -14,17 +14,18 @@
 		
 		<!-- JQuery -->
 		<script src="https://code.jquery.com/jquery-latest.min.js"></script>
-
-		<!-- HTMLtoCanvas API -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 	</head>
 	<body>
+		<div id='gradient'></div>
 		<div id="container">
-			<img id='bbdo' width='300px' src='images/BBDO_Logo.png'>
-			<input type='text' id='officeform'></input>
-			<button id='btnoffice'>SET OFFICE NAME</button>
+			<img id='bbdo' width='300px' src='images/BBDO_Logo.png' style='display: none;'>
+			<div id='title'>
+				BBDO IS OPENING HUNDREDS <br> OF NEW OFFICES.
+			</div>
+			<input type='text' id='officeform' onkeyup="this.value = this.value.toUpperCase();" maxlength = '20'></input>
+			<button id='go'>GO</button>
 			<canvas id='canvas' width="2880" height="400"></canvas>
-			<img id='canvasimg'>
+			<!-- <img id='canvasimg'> -->
 			<button id='btndownload'>DOWNLOAD LOGO</button>
 		</div>
 		<script src="js/index.js"></script>
