@@ -47,7 +47,7 @@ $(document).ready(function() {
 		if (window.mobileAndTabletcheck) {
 			alert('Use this on a desktop, please.');
 		} else {
-			// download(canvas, 'bbdo-logo.png');
+			download(canvas, 'bbdo-logo.png');
 			document.getElementById('instructions').scrollIntoView({behavior: "smooth"});
 		}
 	});
