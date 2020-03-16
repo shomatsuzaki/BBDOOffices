@@ -47,7 +47,7 @@ $(document).ready(function() {
 					cxt.fillRect(0, 90, 470, 20);
 					cxt.fillStyle = '#FFFFFF';
 					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 105);
-					cxt.drawImage(canvas, 0, -50, 1160, 180);
+					cxt.drawImage(canvas, 0, -48, 1160, 180);
 				} else if (officeName.length < 18) {
 					context.font = '160px GothamBlack';
 					context.textAlign = 'start';
@@ -98,7 +98,10 @@ function downloadlogo(canvas, instructions, filename) {
 	instructions.style.display = 'block';
 	location.href = "#";
 	location.href = "#instructions";
-	download(canvas, filename);
+	//delay to allow for scroll
+	setTimeout(function() {
+		download(canvas, filename);
+	}, 800); 
 }
 
 ////////////////////////
