@@ -70,13 +70,13 @@ body {
 #container {
      display: block;
      width: 100%;
-     margin: 5% auto;
+     margin: 5% 0;
      text-align: center;
 }
 
 #canvas {
      display: none;
-     margin: 0 auto;
+     margin: 0;
      /*Shrink the canvas for hi-res*/
      width: 2000px;
      height: 200px;

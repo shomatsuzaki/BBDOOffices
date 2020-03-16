@@ -15,8 +15,8 @@ $(document).ready(function() {
 		$('#btnoffice').click(function() {
 			officeName = document.getElementById('officeform').value.toUpperCase();
 			context.clearRect(0, 0, canvas.width, canvas.height);
-			context.fillText(officeName, canvas.width/2, (canvas.height/2)+63);
-			context.drawImage(logo, 350, (canvas.height/2)-110);
+			context.fillText(officeName, 850, (canvas.height/2)+63);
+			context.drawImage(logo, 200, (canvas.height/2)-110);
 
 			//Convert canvas to visible image
 			dataURL = canvas.toDataURL("image/png;base64");
