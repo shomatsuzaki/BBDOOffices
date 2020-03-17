@@ -23,7 +23,7 @@ $(document).ready(function() {
 	var logo = document.getElementById('bbdo');
 
 	//text for signature
-	var sigtext = 'We are all at BBDO NY, wherever we are. Stay safe.'
+	var sigtext = 'We are all at BBDO, wherever we are. Stay safe.'
 
 	//when user taps enter, click the go button
 	$(document).keyup(function(event) {
