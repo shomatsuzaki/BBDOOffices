@@ -32,6 +32,8 @@ $(document).ready(function() {
 			$('#go').click();
 		}
 	});
+
+	//create the logo after clicking go button
 	$('#go').click(function() {
 		var officeform = document.getElementById('officeform');
 		if (officeform.value == "") {
@@ -40,61 +42,56 @@ $(document).ready(function() {
 			/////////////////////////
 			//THE MAGIC HAPPENS HERE
 			/////////////////////////
-			let f = new FontFace('GothamBlack', 'url(./fonts/Gotham-Black.woff)');
-			f.family = 'GothamBlack';
-			//wait for font to load before rendering on canvas
-			f.load().then(function() {
-				officeName = officeform.value.toUpperCase();
-				//three options for office name sizes
-				if (officeName.length < 11) {
-					//Update the visible canvas
-					context.font = '226px GothamBlack';
-					context.textAlign = 'start';
-					context.clearRect(0, 0, canvas.width, canvas.height);
-					context.fillText(officeName, 590, 180);
-					context.drawImage(logo, 0, 20, 550, 158);
-					
-					//Update the invisible canvas (what is actually being downloaded)
-					cxt.fillStyle = '#ef4023';
-					cxt.fillRect(0, 91, 560, 25);
-					cxt.fillStyle = '#FFFFFF';
-					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 110);
-					cxt.drawImage(canvas, 0, -8, 1160, 100);
-				} else if (officeName.length < 18) {
-					context.font = '160px GothamBlack';
-					context.textAlign = 'start';
-					context.clearRect(0, 0, canvas.width, canvas.height);
-					context.fillText(officeName, 450, 155);
-					context.drawImage(logo, 0, 40, 400, 115);
+			officeName = officeform.value.toUpperCase();
+			//three options for office name sizes
+			if (officeName.length < 11) {
+				//Update the visible canvas
+				context.font = '226px GothamBlack';
+				context.textAlign = 'start';
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				context.fillText(officeName, 590, 180);
+				context.drawImage(logo, 0, 20, 550, 158);
+				
+				//Update the invisible canvas (what is actually being downloaded)
+				cxt.fillStyle = '#ef4023';
+				cxt.fillRect(0, 91, 560, 25);
+				cxt.fillStyle = '#FFFFFF';
+				cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 110);
+				cxt.drawImage(canvas, 0, -8, 1160, 100);
+			} else if (officeName.length < 18) {
+				context.font = '160px GothamBlack';
+				context.textAlign = 'start';
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				context.fillText(officeName, 450, 155);
+				context.drawImage(logo, 0, 40, 400, 115);
 
-					cxt.fillStyle = '#ef4023';
-					cxt.fillRect(0, 80, 560, 25);
-					cxt.fillStyle = '#FFFFFF';
-					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 100);
-					cxt.drawImage(canvas, 0, 0, 928, 80);
-				} else {
-					context.font = '100px GothamBlack';
-					context.textAlign = 'start';
-					context.clearRect(0, 0, canvas.width, canvas.height);
-					context.fillText(officeName, 290, 142);
-					context.drawImage(logo, 0, 70, 250, 72);
+				cxt.fillStyle = '#ef4023';
+				cxt.fillRect(0, 80, 560, 25);
+				cxt.fillStyle = '#FFFFFF';
+				cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 100);
+				cxt.drawImage(canvas, 0, 0, 928, 80);
+			} else {
+				context.font = '100px GothamBlack';
+				context.textAlign = 'start';
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				context.fillText(officeName, 290, 142);
+				context.drawImage(logo, 0, 70, 250, 72);
 
-					cxt.fillStyle = '#ef4023';
-					cxt.fillRect(0, 75, 560, 25);
-					cxt.fillStyle = '#FFFFFF';
-					cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 95);
-					cxt.drawImage(canvas, 0, -7, 1044, 90);
-				}
-				//Convert canvas to visible image
-				// dataURL = canvas.toDataURL("image/png;base64");
-				// img.src = dataURL;
-				// img.style.display = 'block';
+				cxt.fillStyle = '#ef4023';
+				cxt.fillRect(0, 75, 560, 25);
+				cxt.fillStyle = '#FFFFFF';
+				cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 95);
+				cxt.drawImage(canvas, 0, -7, 1044, 90);
+			}
+			//Convert canvas to visible image
+			// dataURL = canvas.toDataURL("image/png;base64");
+			// img.src = dataURL;
+			// img.style.display = 'block';
 
-				//Move to the next part of the site to display the new logo
-				document.getElementById('gradient').style.display = 'none';
-				document.getElementById('open').style.display = 'none';
-				document.getElementById('result').style.display = 'block';
-			});
+			//Move to the next part of the site to display the new logo
+			document.getElementById('gradient').style.display = 'none';
+			document.getElementById('open').style.display = 'none';
+			document.getElementById('result').style.display = 'block';
 			////////////////////////////
 			////////////////////////////
 		}
