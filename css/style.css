@@ -253,7 +253,8 @@ span {
      font-size: 18px;
      letter-spacing: 1.5px;
      border-radius: 20px;
-     padding: 10px 15px 6px 15px;
+     border: none;
+     padding: 12px 16px 8px 16px;
 }
 
 #disclaimer {

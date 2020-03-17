@@ -12,7 +12,7 @@ $(document).ready(function() {
 	//hidden canvas rendering the full signature with subheader
 	var signature = document.getElementById('signature');
 	var cxt = signature.getContext('2d');
-	cxt.font = '100 22px Arial';
+	cxt.font = '100 27px Arial';
 	cxt.textAlign = 'start';
 	
 	//address entered
@@ -21,6 +21,9 @@ $(document).ready(function() {
 
 	//bbdo color logo
 	var logo = document.getElementById('bbdo');
+
+	//text for signature
+	var sigtext = 'We are all at BBDO NY, wherever we are. Stay safe.'
 
 	//when user taps enter, click the go button
 	$(document).keyup(function(event) {
@@ -54,9 +57,9 @@ $(document).ready(function() {
 				
 				//Update the invisible canvas (what is actually being downloaded)
 				cxt.fillStyle = '#ef4023';
-				cxt.fillRect(0, 91, 560, 25);
+				cxt.fillRect(0, 91, cxt.measureText(sigtext).width, 29);
 				cxt.fillStyle = '#FFFFFF';
-				cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 110);
+				cxt.fillText(sigtext, 0, 114);
 				cxt.drawImage(canvas, 0, -8, 1160, 100);
 			} else if (officeName.length < 18) {
 				context.font = '160px GothamBlack';
@@ -66,9 +69,9 @@ $(document).ready(function() {
 				context.drawImage(logo, 0, 40, 400, 115);
 
 				cxt.fillStyle = '#ef4023';
-				cxt.fillRect(0, 80, 560, 25);
+				cxt.fillRect(0, 80, cxt.measureText(sigtext).width, 29);
 				cxt.fillStyle = '#FFFFFF';
-				cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 100);
+				cxt.fillText(sigtext, 0, 103);
 				cxt.drawImage(canvas, 0, 0, 928, 80);
 			} else {
 				context.font = '100px GothamBlack';
@@ -78,9 +81,9 @@ $(document).ready(function() {
 				context.drawImage(logo, 0, 70, 250, 72);
 
 				cxt.fillStyle = '#ef4023';
-				cxt.fillRect(0, 75, 560, 25);
+				cxt.fillRect(0, 75, cxt.measureText(sigtext).width, 29);
 				cxt.fillStyle = '#FFFFFF';
-				cxt.fillText('We are all at BBDO NY, wherever we are. Stay safe.', 0, 95);
+				cxt.fillText(sigtext, 0, 98);
 				cxt.drawImage(canvas, 0, -7, 1044, 90);
 			}
 			//Convert canvas to visible image
