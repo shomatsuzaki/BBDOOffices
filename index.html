@@ -27,9 +27,12 @@
 		<meta name="theme-color" content="#ffffff">
 	</head>
 	<body>
+		<!-- Splash page for mobile and tablet -->
 		<div id='mobilesplash' style='display: none;'>PLEASE VIEW THIS SITE ON DESKTOP</div>
+		<!-- Changing gradient background -->
 		<div id='gradient'></div>
 		<div id='container'>
+			<!-- Page when you arrive on the site -->
 			<div id='open'>
 				<img id='bbdo' src='images/BBDO_Logo.png' style='display: none;'>
 				<div id='title'>
@@ -46,13 +49,13 @@
 					AND ADD IT TO YOUR EMAIL SIGNATURE.
 				</div>
 			</div>
+			<!-- Page after you've submitted the address -->
 			<div id='result' style='display: none;'>
 				<div id='formheader'>OMN FORM 0012</div>
 				<hr class='thick'>
 				<hr class='thin'>
 				<div id='congrats'>CONGRATS, YOU JUST LAUNCHED A NEW BBDO OFFICE<span>*</span></div>
 				<canvas id='canvas' width="2320" height="200"></canvas>
-				<!-- <img id='canvasimg'> -->
 				<hr class='thick'>
 				<button id='btndownload'>DOWNLOAD LOGO</button>
 				<div id='disclaimer'>
@@ -62,6 +65,7 @@
 				<hr class='thick'>
 				<hr class='thin'>
 				<img id='instructions' src='images/instructions.jpg' style='display: none;'>
+				<!-- Hidden canvas that renders the signature (with subheader) -->
 				<canvas id='signature' width="1130" height="118" style='display: none;'></canvas>
 			</div>
 		</div>

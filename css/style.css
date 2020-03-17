@@ -194,6 +194,12 @@ input:focus, button:focus {
      margin: 50px auto;
 }
 
+@media only screen and (max-width: 1090px) {
+     input {
+          width: 450px;
+     }
+}
+
 /******************************************
 /* RESULT                   
 /*******************************************/
@@ -283,13 +289,5 @@ span {
      -webkit-transform: translate(-50%, -50%);
      -moz-transform: translate(-50%, -50%);
 }
-
-/*#canvasimg {
-     display: none;
-     margin: 0;
-     width: 1440px;
-     height: 200px;
-}*/
-
 
 

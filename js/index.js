@@ -1,22 +1,28 @@
 $(document).ready(function() {
-	//splash page for mobile
+	//check for mobile and tablet, serve splash page if present
 	if (window.mobileAndTabletcheck) {
 		document.getElementById('container').style.display = 'none';
 		document.getElementById('mobilesplash').style.display = 'block';
 	}
 
+	//main visible canvas settings
 	var canvas = document.getElementById('canvas');
 	var context = canvas.getContext('2d');
+
+	//hidden canvas rendering the full signature with subheader
 	var signature = document.getElementById('signature');
 	var cxt = signature.getContext('2d');
 	cxt.font = '100 22px Arial';
 	cxt.textAlign = 'start';
 	
+	//address entered
 	var officeName = '';
 	var dataURL = '';
-	// var img = document.getElementById('canvasimg');
+
+	//bbdo color logo
 	var logo = document.getElementById('bbdo');
 
+	//when user taps enter, click the go button
 	$(document).keyup(function(event) {
 		// Number 13 is the "Enter" key on the keyboard
 		if (event.keyCode === 13) {
@@ -31,18 +37,24 @@ $(document).ready(function() {
 		if (officeform.value == "") {
 			;
 		} else {
+			/////////////////////////
 			//THE MAGIC HAPPENS HERE
+			/////////////////////////
 			let f = new FontFace('GothamBlack', 'url(./fonts/Gotham-Black.woff)');
 			f.family = 'GothamBlack';
+			//wait for font to load before rendering on canvas
 			f.load().then(function() {
 				officeName = officeform.value.toUpperCase();
+				//three options for office name sizes
 				if (officeName.length < 11) {
+					//Update the visible canvas
 					context.font = '226px GothamBlack';
 					context.textAlign = 'start';
 					context.clearRect(0, 0, canvas.width, canvas.height);
 					context.fillText(officeName, 590, 180);
 					context.drawImage(logo, 0, 20, 550, 158);
 					
+					//Update the invisible canvas (what is actually being downloaded)
 					cxt.fillStyle = '#ef4023';
 					cxt.fillRect(0, 91, 560, 25);
 					cxt.fillStyle = '#FFFFFF';
@@ -77,13 +89,18 @@ $(document).ready(function() {
 				// dataURL = canvas.toDataURL("image/png;base64");
 				// img.src = dataURL;
 				// img.style.display = 'block';
+
+				//Move to the next part of the site to display the new logo
 				document.getElementById('gradient').style.display = 'none';
 				document.getElementById('open').style.display = 'none';
 				document.getElementById('result').style.display = 'block';
 			});
+			////////////////////////////
+			////////////////////////////
 		}
 	});
 
+	//scroll down to the instructions before downloading the PNG
 	$('#btndownload').click(function() {
 		var instructions = document.getElementById('instructions');
 		downloadlogo(signature, instructions, 'bbdo-logo.png');
